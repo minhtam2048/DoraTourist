@@ -4,9 +4,9 @@ var gender = ["male", "female"];
 var categories = [""];
 var locations = [];
 var areas = ["DaNang", "NewYork", "Fukuoka", "Nha Trang", "Bali", "Chiba", "Singapore", "Manila", "Taiwan", "ShangHai"];
-faker.seed(5);
+faker.seed(10);
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 1000; i++) {
 
     var reviewFoodPoint = faker.random.number({
         min: 1,

@@ -2,9 +2,10 @@ import { DataTypes } from "./Types";
 
 const protocol = "http";
 const hostname = "localhost";
-const port = 6969;
+const port = 3000;
 
 export const RestUrls = {
-    [DataTypes.LOCATIONS]: `${protocol}://${hostname}:${port}/api/locations`,
-    [DataTypes.AREAS]: `${protocol}://${hostname}:${port}/api/areas`
+    [DataTypes.LOCATIONS]: `${protocol}://${hostname}:${port}/locations`,
+    [DataTypes.AREAS]: `${protocol}://${hostname}:${port}/areas`,
+    [DataTypes.USERS]: `${protocol}://${hostname}:${port}/users`
 }

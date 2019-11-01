@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import  { Redirect } from 'react-router-dom';
+import { LocationDetails } from './LocationDetails';
 
 export class LocationList extends Component {
     render() {
@@ -7,7 +9,7 @@ export class LocationList extends Component {
         }
 
         return this.props.locations.map(p =>
-            <div className="card m-1 p-1 bg-light" key={p.id}>
+            <div className="card m-1 p-1 bg-light" key={p.id} onClick={this.redirectToDetail(p.id) }>
                 <h4>
                     { p.name }
                     <span className="badge badge-pill badge-primary float-right">{ p.price }</span>
@@ -16,5 +18,10 @@ export class LocationList extends Component {
                 <img src={ p.image } ></img>
             </div>
         )
+    }
+
+    redirectToDetail = (id) => {
+        var url = 'http://localhost:3001/locations/' + id; 
+        return <Redirect to= {url} />
     }
 }

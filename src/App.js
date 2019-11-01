@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 export default class App extends Component {
   render() {
-    return <Provider store={ ShopDataStore }>
+    return (
+    <Provider store={ ShopDataStore }>
       <Router>
         <Switch>
           <Route path="/home" component={ Connector } />
@@ -14,6 +15,7 @@ export default class App extends Component {
         </Switch>
       </Router> 
     </Provider>
+    )
   }
 }
 
